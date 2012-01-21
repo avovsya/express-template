@@ -1,0 +1,14 @@
+div#loginBox
+    != messages()
+    form(action='/login', method='POST')
+        input(type='hidden', name='redir', value=redir)
+        p
+            label(for='user_email') Email:
+            input(type='text', name='user[email]')
+        p
+            label(for='user_password') Password:
+            input(type='password', name='user[password]')
+        p 
+            input(type='submit', value='Login')
+        p
+            a(href='/register') Register
